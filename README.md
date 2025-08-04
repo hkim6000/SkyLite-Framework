@@ -1,0 +1,113 @@
+=
+Welcome to the SkyLite Framework Project Template!
+===================================================================
+
+This template, designed for Microsoft Visual Studio, provides the standard file and folder structure to get you started quickly.
+
+-------------------------------------------------------------------
+                           Introduction
+-------------------------------------------------------------------
+
+SkyLite is a .NET framework for rapidly building modern, data-driven web applications. It uses a server-centric model where your UI is controlled by server-side C# or VB.NET, and client-server communication is handled by a lightweight, built-in AJAX engine. This allows you to leverage your .NET skills to create responsive, interactive web pages with minimal custom JavaScript, all within the familiar Visual Studio environment.
+
+-------------------------------------------------------------------
+                      Project Structure
+-------------------------------------------------------------------
+
+This template has created the official SkyLite folder structure. The framework relies on these specific folders to automatically locate and link your files.
+
+- /App_Code/
+  Place all your server-side page logic files here (e.g., MyPage.cs, MyPage.vb). Every page class MUST inherit from `skylite.WebPage`.
+
+- /appConfig/
+  Contains application configuration files, such as `application.cfg` for database connection strings and other global settings.
+
+- /bin/
+  Contains the required `skylite.dll`. Do not remove this file.
+
+- /data/
+  A general-purpose folder for data files like SQLite databases, CSVs, etc.
+
+- /htmls/
+  Place your optional, pure HTML files here. If a file named `MyPage.html` exists in this folder, its content will be automatically loaded as the initial body for the `MyPage` class.
+
+- /images/
+  Store all your image assets here.
+
+- /logs/
+  The framework will automatically write error logs to this directory.
+
+- /scripts/
+  Place all your client-side JavaScript files here. A file named `MyPage.js` will be automatically linked to the `MyPage` page.
+
+- /styles/
+  Place all your CSS stylesheets here. A file named `MyPage.css` will be automatically linked to the `MyPage` page.
+
+- /temp/
+  A directory for temporary file generation, such as reports or uploads.
+
+-------------------------------------------------------------------
+                        Getting Started
+-------------------------------------------------------------------
+
+To create your first page using this Visual Studio template:
+
+1.  **Create the Server-Side Class:**
+    - Right-click the `App_Code` folder in the Solution Explorer and select "Add" -> "Class".
+    - Name it `HomePage.cs` (for C#) or `HomePage.vb` (for VB.NET).
+    - Ensure the class inherits from `skylite.WebPage`.
+
+    **C# Example (`HomePage.cs`)**
+    ```csharp
+    using skylite;
+    using skylite.ToolKit;
+
+    public class HomePage : WebPage
+    {
+        public override void OnInitialized()
+        {
+            // Your UI controls will be created here.
+            var welcomeLabel = new Label("Welcome to SkyLite!");
+            HtmlDoc.HtmlBodyText = welcomeLabel.HtmlText();
+        }
+    }
+    ```
+
+    **VB.NET Example (`HomePage.vb`)**
+    ```vb.net
+    Imports skylite
+    Imports skylite.ToolKit
+
+    Public Class HomePage
+        Inherits WebPage
+
+        Public Overrides Sub OnInitialized()
+            ' Your UI controls will be created here.
+            Dim welcomeLabel As New Label("Welcome to SkyLite!")
+            HtmlDoc.HtmlBodyText = welcomeLabel.HtmlText()
+        End Sub
+
+    End Class
+    ```
+
+2.  **Run the Application:**
+    - Set up your project in IIS as an application.
+    - In Visual Studio, you can set the "Start Action" in your project properties to your page URL to debug directly.
+    - Open your browser and navigate to: http://localhost/[YourAppName]/HomePage
+
+3.  **Add Interaction (Optional):**
+    - Create a `HomePage.js` file in the `/scripts` folder.
+    - Add a `Button` control in your `OnInitialized` method with an `onclick` event.
+    - Create the corresponding public function in your `HomePage` class to handle the button click.
+
+-------------------------------------------------------------------
+                         Key Concepts
+-------------------------------------------------------------------
+
+- **Page Lifecycle (GET):** When a page is requested, the framework runs `OnLoad` (loads .html if it exists) and then `OnInitialized` (where you build your UI).
+- **API Calls (POST):** Client-side JavaScript uses the built-in `$ApiRequest()` function to call public functions in your page class.
+- **ApiResponse:** Server-side functions return an `ApiResponse` object, which contains commands to manipulate the page in real-time (e.g., `_ApiResponse.SetElementContents(...)`, `_ApiResponse.Navigate(...)`).
+
+For complete documentation on all UI controls and framework features, please visit the official documentation site.
+
+Happy Coding!
