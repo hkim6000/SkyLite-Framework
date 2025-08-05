@@ -1,19 +1,18 @@
-<h3>SkyLite Framework Project Template v 1.9.8</h3>
+<h2>SkyLite Framework Project Template v 1.9.8</h2>
 
 This template, designed for Microsoft Visual Studio, provides the standard file and folder structure to get you started quickly.
 
 
-<h4>Introduction</h4>
+<h3>Introduction</h3>
 
 SkyLite is a .NET framework for rapidly building modern, data-driven web applications. It uses a server-centric model where your UI is controlled by server-side C# or VB.NET, and client-server communication is handled by a lightweight, built-in AJAX engine. This allows you to leverage your .NET skills to create responsive, interactive web pages with minimal custom JavaScript, all within the familiar Visual Studio environment.
 
--------------------------------------------------------------------
-                      Project Structure
--------------------------------------------------------------------
+
+<h3>Project Structure</h3>h3
 
 This template has created the official SkyLite folder structure. The framework relies on these specific folders to automatically locate and link your files.
 
-- /App_Code/
+- <b>/App_Code/</b>
   Place all your server-side page logic files here (e.g., MyPage.cs, MyPage.vb). Every page class MUST inherit from `skylite.WebPage`.
 
 - /appConfig/
@@ -43,9 +42,8 @@ This template has created the official SkyLite folder structure. The framework r
 - /temp/
   A directory for temporary file generation, such as reports or uploads.
 
--------------------------------------------------------------------
-                        Getting Started
--------------------------------------------------------------------
+
+<h3>Getting Started</h3>h3
 
 To create your first page using this Visual Studio template:
 
@@ -97,9 +95,8 @@ To create your first page using this Visual Studio template:
     - Add a `Button` control in your `OnInitialized` method with an `onclick` event.
     - Create the corresponding public function in your `HomePage` class to handle the button click.
 
--------------------------------------------------------------------
-                         Key Concepts
--------------------------------------------------------------------
+
+<h3>Key Concepts</h3>h3
 
 - **Page Lifecycle (GET):** When a page is requested, the framework runs `OnLoad` (loads .html if it exists) and then `OnInitialized` (where you build your UI).
 - **API Calls (POST):** Client-side JavaScript uses the built-in `$ApiRequest()` function to call public functions in your page class.
