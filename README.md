@@ -94,7 +94,7 @@ To create your first page using this Visual Studio template:
 2.  **Run the Application:**
     - Set up your project in IIS as an application.
     - In Visual Studio, you can set the "Start Action" in your project properties to your page URL to debug directly.
-    - Open your browser and navigate to: http://localhost/[YourAppName]/HomePage
+    - Open your browser and navigate to: http://localhost/[YourAppName]/HomePage or http://localhost/HomePage
 
 3.  **Add Interaction (Optional):**
     - Create a `HomePage.js` file in the `/scripts` folder.
