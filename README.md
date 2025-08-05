@@ -8,7 +8,7 @@ This template, designed for Microsoft Visual Studio, provides the standard file 
 SkyLite is a .NET framework for rapidly building modern, data-driven web applications. It uses a server-centric model where your UI is controlled by server-side C# or VB.NET, and client-server communication is handled by a lightweight, built-in AJAX engine. This allows you to leverage your .NET skills to create responsive, interactive web pages with minimal custom JavaScript, all within the familiar Visual Studio environment.
 
 
-<h3>Project Structure</h3>h3
+<h3>Project Structure</h3>
 
 This template has created the official SkyLite folder structure. The framework relies on these specific folders to automatically locate and link your files.
 
@@ -43,7 +43,7 @@ This template has created the official SkyLite folder structure. The framework r
   A directory for temporary file generation, such as reports or uploads.
 
 
-<h3>Getting Started</h3>h3
+<h3>Getting Started</h3>
 
 To create your first page using this Visual Studio template:
 
@@ -96,7 +96,7 @@ To create your first page using this Visual Studio template:
     - Create the corresponding public function in your `HomePage` class to handle the button click.
 
 
-<h3>Key Concepts</h3>h3
+<h3>Key Concepts</h3>
 
 - **Page Lifecycle (GET):** When a page is requested, the framework runs `OnLoad` (loads .html if it exists) and then `OnInitialized` (where you build your UI).
 - **API Calls (POST):** Client-side JavaScript uses the built-in `$ApiRequest()` function to call public functions in your page class.
