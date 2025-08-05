@@ -15,31 +15,31 @@ This template has created the official SkyLite folder structure. The framework r
 - <b>/App_Code/</b>
   Place all your server-side page logic files here (e.g., MyPage.cs, MyPage.vb). Every page class MUST inherit from `skylite.WebPage`.
 
-- /appConfig/
+- <b>/appConfig/</b>
   Contains application configuration files, such as `application.cfg` for database connection strings and other global settings.
 
-- /bin/
+- <b>/bin/</b>
   Contains the required `skylite.dll`. Do not remove this file.
 
-- /data/
+- <b>/data/</b>
   A general-purpose folder for data files like SQLite databases, CSVs, etc.
 
-- /htmls/
+- <b>/htmls/</b>
   Place your optional, pure HTML files here. If a file named `MyPage.html` exists in this folder, its content will be automatically loaded as the initial body for the `MyPage` class.
 
-- /images/
+- <b>/images/</b>
   Store all your image assets here.
 
-- /logs/
+- <b>/logs/</b>
   The framework will automatically write error logs to this directory.
 
-- /scripts/
+- <b>/scripts/</b>
   Place all your client-side JavaScript files here. A file named `MyPage.js` will be automatically linked to the `MyPage` page.
 
-- /styles/
+- <b>/styles/</b>
   Place all your CSS stylesheets here. A file named `MyPage.css` will be automatically linked to the `MyPage` page.
 
-- /temp/
+- <b>/temp/</b>
   A directory for temporary file generation, such as reports or uploads.
 
 
