@@ -1,6 +1,4 @@
-=
-SkyLite Framework 
-Project Template v 1.9.8
+<h3>SkyLite Framework Project Template v 1.9.8</h3>
 ===================================================================
 
 This template, designed for Microsoft Visual Studio, provides the standard file and folder structure to get you started quickly.
